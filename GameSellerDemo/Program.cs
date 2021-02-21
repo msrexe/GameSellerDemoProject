@@ -10,7 +10,7 @@ namespace GameSellerDemo
         {
             GamerManager gamerManager = new GamerManager();
             Gamer gamer1 = new Gamer();
-            gamer1.GamerID = 123;
+            gamer1.GamerID = 1234;
             gamer1.Name = "Melih";
             gamer1.Surname = "Sivri";
             gamer1.NationalID = 123123123;
