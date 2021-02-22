@@ -8,7 +8,7 @@ namespace GameSellerDemo
     {
         static void Main(string[] args)
         {
-            GamerManager gamerManager = new GamerManager();
+            GamerManager gamerManager = new GamerManager(new UserValidationManager());
             Gamer gamer1 = new Gamer();
             gamer1.GamerID = 1234;
             gamer1.Name = "Melih";

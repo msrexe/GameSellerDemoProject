@@ -8,10 +8,14 @@ namespace GameSellerDemo.Concrete
 {
     class GamerManager : IGamerService
     {
-        UserValidationManager _userValidationManager = new UserValidationManager();
+        IUserValidationService _userValidationService;
+        public GamerManager(IUserValidationService userValidationService)
+        {
+            _userValidationService = userValidationService;
+        }
         public void Add(Gamer gamer)
         {
-            if (_userValidationManager.Validate(gamer))
+            if (_userValidationService.Validate(gamer))
             {
                 Console.WriteLine(gamer.Name + " isimli kullanıcı eklendi");
             }
